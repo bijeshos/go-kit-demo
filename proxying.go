@@ -115,3 +115,5 @@ func split(s string) []string {
 	}
 	return a
 }
+
+//reference: https://github.com/go-kit/kit
