@@ -27,4 +27,7 @@ func (stringService) Count(s string) int {
 // ErrEmpty is returned when an input string is empty.
 var ErrEmpty = errors.New("empty string")
 
+// ServiceMiddleware is a chainable behavior modifier for StringService.
+type ServiceMiddleware func(StringService) StringService
+
 //reference: https://github.com/go-kit/kit
