@@ -1,4 +1,4 @@
-# go-microservices
-An example microservices implementation using Go
+# go-kit-demo
+An example microservices implementation in Go (using go-kit)
 
 ** work in progress **
