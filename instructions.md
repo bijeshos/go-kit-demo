@@ -4,19 +4,19 @@
 (In sequence)
 ### Terminal 1
 Execute the following in Terminal 1
-- `$ ./go-microservices -listen=:8001 &`
+- `$ ./go-kit-demo -listen=:8001 &`
     - Expected output:
         - `listen=:8001 caller=proxying.go:25 proxy_to=none`
         - `listen=:8001 caller=main.go:72 msg=HTTP addr=:8001`
-- `$ ./go-microservices -listen=:8002 &`
+- `$ ./go-kit-demo -listen=:8002 &`
     - Expected output:
         - `listen=:8002 caller=proxying.go:25 proxy_to=none`
         - `listen=:8002 caller=main.go:72 msg=HTTP addr=:8002`
-- `$ ./go-microservices -listen=:8003 &`
+- `$ ./go-kit-demo -listen=:8003 &`
     - Expected output:
         - `listen=:8003 caller=proxying.go:25 proxy_to=none`
         - `listen=:8003 caller=main.go:72 msg=HTTP addr=:8003`
-- `$ ./go-microservices -listen=:8080 -proxy=localhost:8001,localhost:8002,localhost:8003`
+- `$ ./go-kit-demo -listen=:8080 -proxy=localhost:8001,localhost:8002,localhost:8003`
     - Expected output:
         - `listen=:8080 caller=proxying.go:29 proxy_to="[localhost:8001 localhost:8002 localhost:8003]"`
         - `listen=:8080 caller=main.go:72 msg=HTTP addr=:8080`        
@@ -45,7 +45,7 @@ Verify the following in Terminal 1
 Execute the following in Terminal 1
 - `$ go build`
     - to build the project
-- `$ ./go-microservices`
+- `$ ./go-kit-demo`
     - to run the app
     - Expected output: `msg=HTTP addr=:8080`
 
